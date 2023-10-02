@@ -1,0 +1,32 @@
+﻿<Window x:Class="Практическая_работа__2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Практическая_работа__2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="2,0,-2,0" Background="#FF53B2AD">
+        <Button x:Name="Button_Добавить" Content="Добавить число" HorizontalAlignment="Left" Margin="35,0,0,0" VerticalAlignment="Center" Width="120" ToolTip="Добавляет число в массив" Click="Click_Добавить_число"/>
+        <TextBox x:Name="TextBox_Rez" HorizontalAlignment="Left" Margin="513,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" ToolTip="Поле вывода произведения"/>
+        <TextBox x:Name="TextBox_K" HorizontalAlignment="Left" Margin="35,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" ToolTip="Поле ввода"/>
+        <Button Content="Помножить" HorizontalAlignment="Left" Margin="35,237,0,0" VerticalAlignment="Top" Width="120" ToolTip="Выполняет вычисления со всеми членами массива" Click="Click_Помножить"/>
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="О программе" Click="MenuItem_Click_О_программе" ToolTip="Информация о программе"  >
+            </MenuItem>
+            <MenuItem Header="Выход" Click="MenuItem_Click_Выход" ToolTip="Закрывает рабочую программу" >
+            </MenuItem>
+            <MenuItem x:Name="MenuItem_Сохранить" Header="Сохранить" Click="MenuItem_Click_Сохранить" ToolTip="Сохраняет массив" IsEnabled="False">
+            </MenuItem>
+            <MenuItem x:Name="MenuItem_Вставить" Header="вставить" Click="MenuItem_Click_Вставить" ToolTip="Выводит сохранённый массив"/>
+        </Menu>
+        <Label Content="Число" HorizontalAlignment="Left" Margin="35,137,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Произведение" HorizontalAlignment="Left" Margin="513,58,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TextBox_Razm" HorizontalAlignment="Left" Margin="35,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Размер массива" HorizontalAlignment="Left" Margin="35,58,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Создать массив" HorizontalAlignment="Left" Margin="35,113,0,0" VerticalAlignment="Top" Width="120" Click="Click_Размер"/>
+        <Label Content="Краткость - сестра таланта." HorizontalAlignment="Left" Margin="249,324,0,0" VerticalAlignment="Top" Width="344" FontFamily="Andalus" FontSize="24"/>
+        <TextBox x:Name="Tb_Массив" HorizontalAlignment="Left" Margin="280,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+
+    </Grid>
+</Window>
