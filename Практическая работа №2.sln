@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32602.291
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Практическая работа №2", "Практическая работа №2\Практическая работа №2.csproj", "{908F97A4-CA4B-4A55-9DD9-EAA0EE215710}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Практическая работа №2", "Практическая работа №2\Практическая работа №2.csproj", "{908F97A4-CA4B-4A55-9DD9-EAA0EE215710}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib_2", "Lib_2\Lib_2.csproj", "{8625EB2F-3760-461D-BFDB-3448E43C8147}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lib_2", "Lib_2\Lib_2.csproj", "{8625EB2F-3760-461D-BFDB-3448E43C8147}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibMas", "LibMas\LibMas.csproj", "{945F5149-2565-4247-B6E0-7E98D356B747}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibMas", "LibMas\LibMas.csproj", "{945F5149-2565-4247-B6E0-7E98D356B747}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

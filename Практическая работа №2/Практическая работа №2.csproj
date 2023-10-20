@@ -8,8 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="unnamed.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\LibMas\LibMas.csproj" />
     <ProjectReference Include="..\Lib_2\Lib_2.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="unnamed.jpg" />
   </ItemGroup>
 
 </Project>
