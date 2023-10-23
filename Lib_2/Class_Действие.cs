@@ -9,15 +9,15 @@ namespace Lib_2
 
               int n = 0;
               int m = 0;
-
-            x = 1;
+              x = 0;
+              
 
             for (int i = 0; i < matr.GetLength(0); i++)
             {
                 n = 0;
                 m = 0;
-
-               
+                
+                 
 
                 for (int j = 0; j < matr.GetLength(1); j++)
                 {
@@ -26,8 +26,9 @@ namespace Lib_2
                     if (matr[i, j] > 0) m++;
 
                 }
+                if (n == m) x = i+1;
             }
-            if (n != m) x = 0;
+            
                     return x;
         }
     }
