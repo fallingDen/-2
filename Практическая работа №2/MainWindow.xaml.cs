@@ -1,4 +1,5 @@
 ﻿using System;
+using Пример_таблицы_WPF;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,95 +25,64 @@ namespace Практическая_работа__2
         {
             InitializeComponent();
         }
-        int[] mas;
+        int[,] matr;
         int n = 0;
-        private void Click_Добавить_число(object sender, RoutedEventArgs e)
-        {
-             if (mas == null)
-             {
-                MessageBox.Show("Создайте массив");
-                return;
-             }
-
-            if (int.TryParse(TextBox_K.Text, out int K)) // проверка является ли значение числом
-            {
-                if (K != 0)
-                {
-
-                    TextBox_K.Clear();
-                    mas[n++] = K;
-                }
-                    else
-                    MessageBox.Show("Введите число отличное от нуля");
-                if (n == mas.Length)
-                {
-                    Button_Добавить.IsEnabled = false;
-                    MenuItem_Сохранить.IsEnabled = true;
-                    
-                 
-                }
-                
-
-            
-            }
-            else
-                MessageBox.Show("Введите число отличное от нуля");
-        }
-
-
-
-
-
-        private void Click_Помножить(object sender, RoutedEventArgs e)
-        {
-            TextBox_Rez.Text = Lib_2.Class_Действие.GetProiz(mas).ToString();
-        }
+        int i, j, x;
 
         private void MenuItem_Click_О_программе(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Автор: Соколов Даниил  Практическая работа №2 \n Цель:Ввести n целых чисел(>0 или <0). Найти произведение чисел. Результат вывести на экран. ");
-            
+            MessageBox.Show("Автор: Соколов Даниил  Практическая работа №2 \n Цель:Дана целочисленная матрица размера M × N.\n Найти номер последнего из ее столбцов, содержащих равное количество положительных и отрицательных элементов (нулевые элементы матрицы не учитываются).\n Если таких столбцов нет, то вывести 0.. ");
+
         }
 
         private void MenuItem_Click_Выход(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void MenuItem_Click_Сохранить(object sender, RoutedEventArgs e)
         {
-            LibMas.Class_Сохранить.Save(mas);
+            LibMatr.Class_Сохранить.Save(matr);
         }
 
         private void MenuItem_Click_Вставить(object sender, RoutedEventArgs e)
         {
-            LibMas.Class_Сохранить.Insert(out mas);
+            LibMatr.Class_Сохранить.Insert(out matr);
+            dg_matr.ItemsSource = VisualArray.ToDataTable(matr).DefaultView;
+            
+        }
+
+        private void Cl_Выявить(object sender, RoutedEventArgs e)
+        {
+             x= Lib_2.Class_Действие.Getnomb(matr, out x);
+            TextBox_Rez.Text = Convert.ToString(x);
         }
 
         private void Click_Размер(object sender, RoutedEventArgs e)
         {
-            
-            if (int.TryParse(TextBox_Razm.Text, out int i)) // проверка является ли значение числом
+            MenuItem_Сохранить.IsEnabled = true;
+            if (int.TryParse(tb_strock.Text, out int n)) // проверка является ли значение числом
             {
-                if (i > 0)
+                if (int.TryParse(tb_stolb.Text, out int m))
+                    
                 {
-                    mas = new int[i];
-                    n = 0 ;
-                    Button_Добавить.IsEnabled = true;
-
-                    MenuItem_Сохранить.IsEnabled = false;
-                   
-                    TextBox_Rez.Clear();
-
+                    matr = new Int32[n, m];
+                    if (n > 0 && m > 0)
+                    {
+                        Random rnd = new Random();
+                        for (i = 0; i < n; i++)
+                        for (j = 0; j < m; j++) matr[i, j] = rnd.Next(-100, 100);
+                        
+                            dg_matr.ItemsSource = VisualArray.ToDataTable(matr).DefaultView;
+                    }
+                    else
+                        MessageBox.Show("Введите размер матрицы правильно");
                 }
                 else
-                MessageBox.Show("Введите размер массива правильно");
+                    MessageBox.Show("Введите размер матрицы правильно");
+
             }
-            else
-            MessageBox.Show("Введите размер массива правильно");
+
         }
-
-    }
+    } 
 }
-    
-

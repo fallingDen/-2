@@ -5,13 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Практическая_работа__2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid Margin="2,0,-2,0" Background="#FF53B2AD">
-        <Button x:Name="Button_Добавить" Content="Добавить число" HorizontalAlignment="Left" Margin="35,0,0,0" VerticalAlignment="Center" Width="120" ToolTip="Добавляет число в массив" Click="Click_Добавить_число"/>
-        <TextBox x:Name="TextBox_Rez" HorizontalAlignment="Left" Margin="513,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" ToolTip="Поле вывода произведения"/>
-        <TextBox x:Name="TextBox_K" HorizontalAlignment="Left" Margin="35,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" ToolTip="Поле ввода"/>
-        <Button Content="Помножить" HorizontalAlignment="Left" Margin="35,237,0,0" VerticalAlignment="Top" Width="120" ToolTip="Выполняет вычисления со всеми членами массива" Click="Click_Помножить"/>
+        Title="Решала V3.1" Height="594" Width="530" Icon="/unnamed.jpg">
+    <Window.Resources>
+        <Color x:Key="GradientStopColor1">#FF4AAA7D</Color>
+    </Window.Resources>
+    <Grid Margin="2,0,-2,0" Background="#FF75B2A4">
+        <TextBox x:Name="TextBox_Rez" HorizontalAlignment="Left" Margin="319,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" IsEnabled="False" ToolTip="Поле вывода произведения"/>
         <Menu VerticalAlignment="Top">
+            <Menu.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF6F6F6" Offset="0.25"/>
+                    <GradientStop Color="#FFEAE8E8" Offset="0.25"/>
+                    <GradientStop Color="#FFDCD9D9" Offset="0.8"/>
+                    <GradientStop Color="#FF234D39" Offset="1"/>
+                </LinearGradientBrush>
+            </Menu.Background>
             <MenuItem Header="О программе" Click="MenuItem_Click_О_программе" ToolTip="Информация о программе"  >
             </MenuItem>
             <MenuItem Header="Выход" Click="MenuItem_Click_Выход" ToolTip="Закрывает рабочую программу" >
@@ -20,13 +28,34 @@
             </MenuItem>
             <MenuItem x:Name="MenuItem_Вставить" Header="вставить" Click="MenuItem_Click_Вставить" ToolTip="Выводит сохранённый массив"/>
         </Menu>
-        <Label Content="Число" HorizontalAlignment="Left" Margin="35,137,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Произведение" HorizontalAlignment="Left" Margin="513,58,0,0" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="TextBox_Razm" HorizontalAlignment="Left" Margin="35,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Размер массива" HorizontalAlignment="Left" Margin="35,58,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Создать массив" HorizontalAlignment="Left" Margin="35,113,0,0" VerticalAlignment="Top" Width="120" Click="Click_Размер"/>
-        <Label Content="Краткость - сестра таланта." HorizontalAlignment="Left" Margin="249,324,0,0" VerticalAlignment="Top" Width="344" FontFamily="Andalus" FontSize="24"/>
-        <TextBox x:Name="Tb_Массив" HorizontalAlignment="Left" Margin="280,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Label Content="Произведение" HorizontalAlignment="Left" Margin="622,321,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb_strock" HorizontalAlignment="Left" Margin="35,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="137"/>
+        <Label Content="Характеристики матрицы" HorizontalAlignment="Left" Margin="35,221,0,0" VerticalAlignment="Top" Width="157"/>
+        <Button Content="Создать матрицу" HorizontalAlignment="Left" Margin="35,363,0,0" VerticalAlignment="Top" Width="120" Click="Click_Размер" ToolTip="Создаёт матрицу">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF3F3F3"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FF387A5C" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="tb_stolb" HorizontalAlignment="Left" Margin="35,325,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137"/>
+        <DataGrid x:Name="dg_matr" Margin="0,21,0,360" IsEnabled="False" Background="#FF85B9AD"/>
+        <Label Content="Количество строк" HorizontalAlignment="Left" Margin="35,247,0,0" VerticalAlignment="Top" Width="137"/>
+        <Label Content="Количество столбцов" HorizontalAlignment="Left" Margin="35,300,0,0" VerticalAlignment="Top" Width="137"/>
+        <Label Content="Номер строки" HorizontalAlignment="Left" Margin="319,247,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Выявить" HorizontalAlignment="Left" Margin="35,398,0,0" VerticalAlignment="Top" Width="120" Click="Cl_Выявить">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF3F3F3"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FF3A7C5E" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>
